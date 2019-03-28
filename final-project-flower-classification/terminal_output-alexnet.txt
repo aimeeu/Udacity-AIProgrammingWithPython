@@ -1,0 +1,192 @@
+#####  TERMINAL OUTPUT FOR PROJECT SUBMISSION, PART 2 - SECOND SUBMITTAL - ALEXNET #####
+
+root@47d6f27ce23c:/home/workspace# cd a*
+root@47d6f27ce23c:/home/workspace/aipnd-project# ls
+assets  cat_to_name.json  dahlia.jpg  flowers  helper.py  Image Classifier Project.ipynb  LICENSE  predict.py  README.md  rose.jpg  train.py
+root@47d6f27ce23c:/home/workspace/aipnd-project# python train.py -h
+Starting...
+Parse Command Line Arguments
+usage: train.py [-h] [--save_dir SAVE_DIR] [--arch ARCH]
+                [--learning_rate LEARNING_RATE] [--epochs EPOCHS]
+                [--hidden_units HIDDEN_UNITS] [--gpu GPU]
+                data_directory
+
+positional arguments:
+  data_directory        path to top level image folder that contains
+                        subdirectories test, train, valid
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --save_dir SAVE_DIR   directory to save checkpoint if other than current
+                        directory
+  --arch ARCH           torchvision.models model; choices: densenet, alexnet;
+                        default: densenet
+  --learning_rate LEARNING_RATE
+                        learning rate for the optimizer; default 0.001
+  --epochs EPOCHS       number of epochs to use to train model; default: 20
+  --hidden_units HIDDEN_UNITS
+                        hidden units; default 512 to match default arch of
+                        densenet
+  --gpu GPU             use GPU for predicting image class; choices: True or
+                        False; default: True
+root@47d6f27ce23c:/home/workspace/aipnd-project# python train.py flowers --arch=alexnet --hidden_units=4096
+Starting...
+Parse Command Line Arguments
+ Loading Pre-Trained Model
+ arch alexnet and hidden_units 4096
+Downloading: "https://download.pytorch.org/models/alexnet-owt-4df8aa71.pth" to /root/.torch/models/alexnet-owt-4df8aa71.pth
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 244418560/244418560 [00:07<00:00, 31392604.46it/s]
+Using GPU
+Create Transforms
+Create Image Data Sets
+Create Data Loaders
+Train Model
+train.py:200: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  running_loss += loss.data[0]
+train.py:220: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  test_loss += criterion(output, labels).data[0]
+Epoch: 1/20..  Training Loss: 6.354..  Valid Loss: 2.095..  Valid Accuracy: 0.494
+Epoch: 1/20..  Training Loss: 2.444..  Valid Loss: 1.242..  Valid Accuracy: 0.670
+Epoch: 2/20..  Training Loss: 2.015..  Valid Loss: 1.081..  Valid Accuracy: 0.703
+Epoch: 2/20..  Training Loss: 1.844..  Valid Loss: 0.871..  Valid Accuracy: 0.759
+Epoch: 2/20..  Training Loss: 1.762..  Valid Loss: 0.831..  Valid Accuracy: 0.785
+Epoch: 3/20..  Training Loss: 1.635..  Valid Loss: 0.815..  Valid Accuracy: 0.779
+Epoch: 3/20..  Training Loss: 1.572..  Valid Loss: 0.739..  Valid Accuracy: 0.792
+Epoch: 4/20..  Training Loss: 1.539..  Valid Loss: 0.679..  Valid Accuracy: 0.802
+Epoch: 4/20..  Training Loss: 1.473..  Valid Loss: 0.679..  Valid Accuracy: 0.811
+Epoch: 4/20..  Training Loss: 1.451..  Valid Loss: 0.679..  Valid Accuracy: 0.810
+Epoch: 5/20..  Training Loss: 1.426..  Valid Loss: 0.629..  Valid Accuracy: 0.825
+Epoch: 5/20..  Training Loss: 1.455..  Valid Loss: 0.672..  Valid Accuracy: 0.807
+Epoch: 6/20..  Training Loss: 1.467..  Valid Loss: 0.712..  Valid Accuracy: 0.805
+Epoch: 6/20..  Training Loss: 1.438..  Valid Loss: 0.616..  Valid Accuracy: 0.827
+Epoch: 6/20..  Training Loss: 1.422..  Valid Loss: 0.668..  Valid Accuracy: 0.804
+Epoch: 7/20..  Training Loss: 1.391..  Valid Loss: 0.617..  Valid Accuracy: 0.838
+Epoch: 7/20..  Training Loss: 1.411..  Valid Loss: 0.557..  Valid Accuracy: 0.850
+Epoch: 7/20..  Training Loss: 1.341..  Valid Loss: 0.612..  Valid Accuracy: 0.843
+Epoch: 8/20..  Training Loss: 1.383..  Valid Loss: 0.584..  Valid Accuracy: 0.845
+Epoch: 8/20..  Training Loss: 1.420..  Valid Loss: 0.582..  Valid Accuracy: 0.841
+Epoch: 9/20..  Training Loss: 1.306..  Valid Loss: 0.613..  Valid Accuracy: 0.832
+Epoch: 9/20..  Training Loss: 1.331..  Valid Loss: 0.545..  Valid Accuracy: 0.854
+Epoch: 9/20..  Training Loss: 1.350..  Valid Loss: 0.521..  Valid Accuracy: 0.860
+Epoch: 10/20..  Training Loss: 1.274..  Valid Loss: 0.563..  Valid Accuracy: 0.852
+Epoch: 10/20..  Training Loss: 1.270..  Valid Loss: 0.584..  Valid Accuracy: 0.836
+Epoch: 11/20..  Training Loss: 1.251..  Valid Loss: 0.580..  Valid Accuracy: 0.840
+Epoch: 11/20..  Training Loss: 1.277..  Valid Loss: 0.521..  Valid Accuracy: 0.853
+Epoch: 11/20..  Training Loss: 1.331..  Valid Loss: 0.505..  Valid Accuracy: 0.858
+Epoch: 12/20..  Training Loss: 1.246..  Valid Loss: 0.533..  Valid Accuracy: 0.865
+Epoch: 12/20..  Training Loss: 1.380..  Valid Loss: 0.518..  Valid Accuracy: 0.864
+Epoch: 13/20..  Training Loss: 1.320..  Valid Loss: 0.496..  Valid Accuracy: 0.870
+Epoch: 13/20..  Training Loss: 1.213..  Valid Loss: 0.575..  Valid Accuracy: 0.860
+Epoch: 13/20..  Training Loss: 1.254..  Valid Loss: 0.502..  Valid Accuracy: 0.872
+Epoch: 14/20..  Training Loss: 1.237..  Valid Loss: 0.528..  Valid Accuracy: 0.863
+Epoch: 14/20..  Training Loss: 1.295..  Valid Loss: 0.487..  Valid Accuracy: 0.875
+Epoch: 14/20..  Training Loss: 1.232..  Valid Loss: 0.496..  Valid Accuracy: 0.870
+Epoch: 15/20..  Training Loss: 1.209..  Valid Loss: 0.526..  Valid Accuracy: 0.854
+Epoch: 15/20..  Training Loss: 1.276..  Valid Loss: 0.512..  Valid Accuracy: 0.873
+Epoch: 16/20..  Training Loss: 1.185..  Valid Loss: 0.468..  Valid Accuracy: 0.882
+Epoch: 16/20..  Training Loss: 1.261..  Valid Loss: 0.570..  Valid Accuracy: 0.852
+Epoch: 16/20..  Training Loss: 1.278..  Valid Loss: 0.548..  Valid Accuracy: 0.861
+Epoch: 17/20..  Training Loss: 1.208..  Valid Loss: 0.520..  Valid Accuracy: 0.867
+Epoch: 17/20..  Training Loss: 1.151..  Valid Loss: 0.498..  Valid Accuracy: 0.871
+Epoch: 18/20..  Training Loss: 1.219..  Valid Loss: 0.522..  Valid Accuracy: 0.873
+Epoch: 18/20..  Training Loss: 1.151..  Valid Loss: 0.555..  Valid Accuracy: 0.867
+Epoch: 18/20..  Training Loss: 1.248..  Valid Loss: 0.516..  Valid Accuracy: 0.868
+Epoch: 19/20..  Training Loss: 1.303..  Valid Loss: 0.508..  Valid Accuracy: 0.876
+Epoch: 19/20..  Training Loss: 1.252..  Valid Loss: 0.504..  Valid Accuracy: 0.888
+Epoch: 20/20..  Training Loss: 1.241..  Valid Loss: 0.546..  Valid Accuracy: 0.871
+Epoch: 20/20..  Training Loss: 1.252..  Valid Loss: 0.586..  Valid Accuracy: 0.862
+Epoch: 20/20..  Training Loss: 1.341..  Valid Loss: 0.513..  Valid Accuracy: 0.873
+Validate Model
+train.py:261: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  test_loss += criterion(output, labels).data[0]
+Test Loss: 0.021..  Test Accuracy: 0.032
+Test Loss: 0.072..  Test Accuracy: 0.061
+Test Loss: 0.117..  Test Accuracy: 0.090
+Test Loss: 0.133..  Test Accuracy: 0.125
+Test Loss: 0.176..  Test Accuracy: 0.151
+Test Loss: 0.184..  Test Accuracy: 0.186
+Test Loss: 0.295..  Test Accuracy: 0.204
+Test Loss: 0.328..  Test Accuracy: 0.236
+Test Loss: 0.332..  Test Accuracy: 0.273
+Test Loss: 0.345..  Test Accuracy: 0.308
+Test Loss: 0.387..  Test Accuracy: 0.332
+Test Loss: 0.390..  Test Accuracy: 0.369
+Test Loss: 0.399..  Test Accuracy: 0.405
+Test Loss: 0.412..  Test Accuracy: 0.441
+Test Loss: 0.443..  Test Accuracy: 0.470
+Test Loss: 0.465..  Test Accuracy: 0.502
+Test Loss: 0.471..  Test Accuracy: 0.540
+Test Loss: 0.474..  Test Accuracy: 0.577
+Test Loss: 0.476..  Test Accuracy: 0.615
+Test Loss: 0.488..  Test Accuracy: 0.650
+Test Loss: 0.510..  Test Accuracy: 0.686
+Test Loss: 0.519..  Test Accuracy: 0.721
+Test Loss: 0.541..  Test Accuracy: 0.754
+Test Loss: 0.555..  Test Accuracy: 0.788
+Test Loss: 0.580..  Test Accuracy: 0.820
+Test Loss: 0.642..  Test Accuracy: 0.846
+Save Checkpoint
+
+** Total Elapsed Runtime: 0:27:37
+root@47d6f27ce23c:/home/workspace/aipnd-project# python predict.py -h
+Starting...
+Parse Command Line Arguments
+usage: predict.py [-h] [--top_k TOP_K] [--category_names CATEGORY_NAMES]
+                  [--gpu GPU] [--image_path IMAGE_PATH]
+                  checkpoint
+
+positional arguments:
+  checkpoint            path and name of checkpoint; ex: checkpoint.pth.tar if
+                        the file is in the same directory as predict.py
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --top_k TOP_K         top K most likely classes; default: 3
+  --category_names CATEGORY_NAMES
+                        File path to JSON mapping of categories to real names;
+                        default: cat_to_name.json
+  --gpu GPU             use GPU for predicting image class; choices: True or
+                        False; default: True
+  --image_path IMAGE_PATH
+                        path to flower image; default:
+                        flowers/test/101/image_07949.jpg
+root@47d6f27ce23c:/home/workspace/aipnd-project# python predict.py alexnet-checkpoint.2018-05-26T03:40:31-79.pth.tar
+Starting...
+Parse Command Line Arguments
+Loading Pre-Trained Model From Checkpoint  alexnet-checkpoint.2018-05-26T03:40:31-79.pth.tar
+Using GPU
+Predicting Class of Flower Image
+image_path  flowers/test/101/image_07949.jpg
+Print Class Name and Probability
+Probability that the image is of class trumpet creeper is 0.9999561309814453.
+Probability that the image is of class geranium is 3.879097494063899e-05.
+Probability that the image is of class snapdragon is 2.714781203394523e-06.
+
+** Total Elapsed Runtime: 0:0:5
+root@47d6f27ce23c:/home/workspace/aipnd-project# python predict.py alexnet-checkpoint.2018-05-26T03:40:31-79.pth.tar --image_path='dahlia.jpg'
+Starting...
+Parse Command Line Arguments
+Loading Pre-Trained Model From Checkpoint  alexnet-checkpoint.2018-05-26T03:40:31-79.pth.tar
+Using GPU
+Predicting Class of Flower Image
+image_path  dahlia.jpg
+Print Class Name and Probability
+Probability that the image is of class garden phlox is 0.6141178607940674.
+Probability that the image is of class clematis is 0.1786671131849289.
+Probability that the image is of class love in the mist is 0.10333174467086792.
+
+** Total Elapsed Runtime: 0:0:5
+root@47d6f27ce23c:/home/workspace/aipnd-project# python predict.py alexnet-checkpoint.2018-05-26T03:40:31-79.pth.tar --image_path='rose.jpg'
+Starting...
+Parse Command Line Arguments
+Loading Pre-Trained Model From Checkpoint  alexnet-checkpoint.2018-05-26T03:40:31-79.pth.tar
+Using GPU
+Predicting Class of Flower Image
+image_path  rose.jpg
+Print Class Name and Probability
+Probability that the image is of class rose is 0.9999790787696838.
+Probability that the image is of class sword lily is 2.1614532670355402e-05.
+Probability that the image is of class camellia is 6.721179346413919e-08.
+
+** Total Elapsed Runtime: 0:0:6
+root@47d6f27ce23c:/home/workspace/aipnd-project#

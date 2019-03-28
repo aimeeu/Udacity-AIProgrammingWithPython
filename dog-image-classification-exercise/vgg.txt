@@ -1,0 +1,29 @@
+***** calling get_input_args *****
+***** calling get_pet_labels *****
+***** calling classify_images_udacity *****
+***** calling adjust_results4_isadog_udacity *****
+***** calculates_results_stats *****
+***** check_results_stats *****
+
+ ** Function's Stats:
+N images: 39 N Dog Images: 30 N Not Dog Images:  9 
+Pct Corr dog: 100.0 Pct Correct not-a-dog: 100.0 Pct Correct Breed:  93.3
+
+ ** Check Stats:
+N images: 39 N Dog Images: 30 N Not Dog Images:  9  
+Pet Corr dog:    93 Pct Correct not-a-dog:  77.8 Pct Correct Breed:  93.3
+/nResults Summary for Model Architecture:  VGG
+            N Images:  39
+        N Dog Images:  30
+    N Not-Dog Images:   9
+ 
+           pct_match:  89.7
+    pct_correct_dogs: 100.0
+   pct_correct_breed:  93.3
+ pct_correct_notdogs: 100.0
+
+INCORRECT Dog Breed Assignment:
+Real: beagle Classifier: walker hound, walker foxhound
+Real: great pyrenees Classifier: kuvasz
+
+** Total Elapsed Runtime: 0:0:20

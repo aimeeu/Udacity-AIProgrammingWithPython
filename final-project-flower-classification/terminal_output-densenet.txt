@@ -1,0 +1,155 @@
+#####  TERMINAL OUTPUT FOR PROJECT SUBMISSION, PART 2 - SECOND SUBMITTAL - DENSENET #####
+
+root@47d6f27ce23c:/home/workspace# cd a*
+root@47d6f27ce23c:/home/workspace/aipnd-project# ls
+alexnet-checkpoint.2018-05-26T03:40:31-79.pth.tar  assets  cat_to_name.json  dahlia.jpg  flowers  helper.py  Image Classifier Project.ipynb  LICENSE  predict.py  __pycache__  README.md  rose.jpg  train.py
+root@47d6f27ce23c:/home/workspace/aipnd-project# python train.py flowers --arch=densenet --hidden_layers=512
+Starting...
+Parse Command Line Arguments
+usage: train.py [-h] [--save_dir SAVE_DIR] [--arch ARCH]
+                [--learning_rate LEARNING_RATE] [--epochs EPOCHS]
+                [--hidden_units HIDDEN_UNITS] [--gpu GPU]
+                data_directory
+train.py: error: unrecognized arguments: --hidden_layers=512
+root@47d6f27ce23c:/home/workspace/aipnd-project# python train.py flowers --arch=densenet --hidden_units=512
+Starting...
+Parse Command Line Arguments
+ Loading Pre-Trained Model
+ arch densenet and hidden_units 512
+/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/models/densenet.py:212: UserWarning: nn.init.kaiming_normal is now deprecated in favor of nn.init.kaiming_normal_.
+Downloading: "https://download.pytorch.org/models/densenet121-a639ec97.pth" to /root/.torch/models/densenet121-a639ec97.pth
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 32342954/32342954 [00:02<00:00, 14343678.04it/s]
+Using GPU
+Create Transforms
+Create Image Data Sets
+Create Data Loaders
+Train Model
+train.py:200: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  running_loss += loss.data[0]
+train.py:220: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  test_loss += criterion(output, labels).data[0]
+Epoch: 1/20..  Training Loss: 4.274..  Valid Loss: 3.645..  Valid Accuracy: 0.216
+Epoch: 1/20..  Training Loss: 3.385..  Valid Loss: 2.549..  Valid Accuracy: 0.491
+Epoch: 2/20..  Training Loss: 2.575..  Valid Loss: 1.716..  Valid Accuracy: 0.666
+Epoch: 2/20..  Training Loss: 1.965..  Valid Loss: 1.192..  Valid Accuracy: 0.779
+Epoch: 2/20..  Training Loss: 1.703..  Valid Loss: 0.981..  Valid Accuracy: 0.796
+Epoch: 3/20..  Training Loss: 1.456..  Valid Loss: 0.842..  Valid Accuracy: 0.830
+Epoch: 3/20..  Training Loss: 1.339..  Valid Loss: 0.727..  Valid Accuracy: 0.834
+Epoch: 4/20..  Training Loss: 1.185..  Valid Loss: 0.598..  Valid Accuracy: 0.874
+Epoch: 4/20..  Training Loss: 1.066..  Valid Loss: 0.564..  Valid Accuracy: 0.873
+Epoch: 4/20..  Training Loss: 1.032..  Valid Loss: 0.495..  Valid Accuracy: 0.888
+Epoch: 5/20..  Training Loss: 1.016..  Valid Loss: 0.481..  Valid Accuracy: 0.890
+Epoch: 5/20..  Training Loss: 0.952..  Valid Loss: 0.447..  Valid Accuracy: 0.897
+Epoch: 6/20..  Training Loss: 0.910..  Valid Loss: 0.400..  Valid Accuracy: 0.919
+Epoch: 6/20..  Training Loss: 0.862..  Valid Loss: 0.387..  Valid Accuracy: 0.911
+Epoch: 6/20..  Training Loss: 0.866..  Valid Loss: 0.373..  Valid Accuracy: 0.905
+Epoch: 7/20..  Training Loss: 0.820..  Valid Loss: 0.370..  Valid Accuracy: 0.917
+Epoch: 7/20..  Training Loss: 0.833..  Valid Loss: 0.372..  Valid Accuracy: 0.901
+Epoch: 7/20..  Training Loss: 0.796..  Valid Loss: 0.331..  Valid Accuracy: 0.919
+Epoch: 8/20..  Training Loss: 0.774..  Valid Loss: 0.328..  Valid Accuracy: 0.913
+Epoch: 8/20..  Training Loss: 0.724..  Valid Loss: 0.313..  Valid Accuracy: 0.925
+Epoch: 9/20..  Training Loss: 0.723..  Valid Loss: 0.313..  Valid Accuracy: 0.929
+Epoch: 9/20..  Training Loss: 0.684..  Valid Loss: 0.303..  Valid Accuracy: 0.927
+Epoch: 9/20..  Training Loss: 0.727..  Valid Loss: 0.286..  Valid Accuracy: 0.937
+Epoch: 10/20..  Training Loss: 0.670..  Valid Loss: 0.288..  Valid Accuracy: 0.931
+Epoch: 10/20..  Training Loss: 0.665..  Valid Loss: 0.283..  Valid Accuracy: 0.926
+Epoch: 11/20..  Training Loss: 0.661..  Valid Loss: 0.270..  Valid Accuracy: 0.931
+Epoch: 11/20..  Training Loss: 0.660..  Valid Loss: 0.288..  Valid Accuracy: 0.929
+Epoch: 11/20..  Training Loss: 0.674..  Valid Loss: 0.274..  Valid Accuracy: 0.931
+Epoch: 12/20..  Training Loss: 0.643..  Valid Loss: 0.268..  Valid Accuracy: 0.928
+Epoch: 12/20..  Training Loss: 0.640..  Valid Loss: 0.267..  Valid Accuracy: 0.931
+Epoch: 13/20..  Training Loss: 0.623..  Valid Loss: 0.271..  Valid Accuracy: 0.931
+Epoch: 13/20..  Training Loss: 0.625..  Valid Loss: 0.250..  Valid Accuracy: 0.934
+Epoch: 13/20..  Training Loss: 0.600..  Valid Loss: 0.260..  Valid Accuracy: 0.937
+Epoch: 14/20..  Training Loss: 0.621..  Valid Loss: 0.251..  Valid Accuracy: 0.933
+Epoch: 14/20..  Training Loss: 0.595..  Valid Loss: 0.250..  Valid Accuracy: 0.933
+Epoch: 14/20..  Training Loss: 0.648..  Valid Loss: 0.268..  Valid Accuracy: 0.933
+Epoch: 15/20..  Training Loss: 0.599..  Valid Loss: 0.239..  Valid Accuracy: 0.938
+Epoch: 15/20..  Training Loss: 0.576..  Valid Loss: 0.243..  Valid Accuracy: 0.940
+Epoch: 16/20..  Training Loss: 0.597..  Valid Loss: 0.252..  Valid Accuracy: 0.945
+Epoch: 16/20..  Training Loss: 0.605..  Valid Loss: 0.234..  Valid Accuracy: 0.940
+Epoch: 16/20..  Training Loss: 0.592..  Valid Loss: 0.256..  Valid Accuracy: 0.938
+Epoch: 17/20..  Training Loss: 0.528..  Valid Loss: 0.245..  Valid Accuracy: 0.940
+Epoch: 17/20..  Training Loss: 0.573..  Valid Loss: 0.241..  Valid Accuracy: 0.937
+Epoch: 18/20..  Training Loss: 0.548..  Valid Loss: 0.234..  Valid Accuracy: 0.939
+Epoch: 18/20..  Training Loss: 0.541..  Valid Loss: 0.219..  Valid Accuracy: 0.950
+Epoch: 18/20..  Training Loss: 0.570..  Valid Loss: 0.228..  Valid Accuracy: 0.945
+Epoch: 19/20..  Training Loss: 0.585..  Valid Loss: 0.239..  Valid Accuracy: 0.940
+Epoch: 19/20..  Training Loss: 0.523..  Valid Loss: 0.235..  Valid Accuracy: 0.935
+Epoch: 20/20..  Training Loss: 0.562..  Valid Loss: 0.230..  Valid Accuracy: 0.938
+Epoch: 20/20..  Training Loss: 0.562..  Valid Loss: 0.211..  Valid Accuracy: 0.945
+Epoch: 20/20..  Training Loss: 0.527..  Valid Loss: 0.217..  Valid Accuracy: 0.944
+Validate Model
+train.py:261: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  test_loss += criterion(output, labels).data[0]
+Test Loss: 0.005..  Test Accuracy: 0.036
+Test Loss: 0.013..  Test Accuracy: 0.073
+Test Loss: 0.016..  Test Accuracy: 0.112
+Test Loss: 0.028..  Test Accuracy: 0.149
+Test Loss: 0.037..  Test Accuracy: 0.184
+Test Loss: 0.041..  Test Accuracy: 0.220
+Test Loss: 0.075..  Test Accuracy: 0.249
+Test Loss: 0.085..  Test Accuracy: 0.284
+Test Loss: 0.086..  Test Accuracy: 0.322
+Test Loss: 0.089..  Test Accuracy: 0.361
+Test Loss: 0.106..  Test Accuracy: 0.391
+Test Loss: 0.112..  Test Accuracy: 0.427
+Test Loss: 0.114..  Test Accuracy: 0.464
+Test Loss: 0.114..  Test Accuracy: 0.502
+Test Loss: 0.125..  Test Accuracy: 0.537
+Test Loss: 0.131..  Test Accuracy: 0.575
+Test Loss: 0.133..  Test Accuracy: 0.613
+Test Loss: 0.135..  Test Accuracy: 0.651
+Test Loss: 0.137..  Test Accuracy: 0.690
+Test Loss: 0.140..  Test Accuracy: 0.727
+Test Loss: 0.147..  Test Accuracy: 0.764
+Test Loss: 0.153..  Test Accuracy: 0.800
+Test Loss: 0.168..  Test Accuracy: 0.834
+Test Loss: 0.172..  Test Accuracy: 0.873
+Test Loss: 0.178..  Test Accuracy: 0.910
+Test Loss: 0.211..  Test Accuracy: 0.940
+Save Checkpoint
+
+** Total Elapsed Runtime: 0:32:25
+root@47d6f27ce23c:/home/workspace/aipnd-project# python predict.py densenet-checkpoint.2018-05-26T04:17:07-57.pth.tar
+Starting...
+Parse Command Line Arguments
+Loading Pre-Trained Model From Checkpoint  densenet-checkpoint.2018-05-26T04:17:07-57.pth.tar
+/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/models/densenet.py:212: UserWarning: nn.init.kaiming_normal is now deprecated in favor of nn.init.kaiming_normal_.
+Using GPU
+Predicting Class of Flower Image
+image_path  flowers/test/101/image_07949.jpg
+Print Class Name and Probability
+Probability that the image is of class trumpet creeper is 0.9111292362213135.
+Probability that the image is of class geranium is 0.03575555980205536.
+Probability that the image is of class watercress is 0.014744767919182777.
+
+** Total Elapsed Runtime: 0:0:4
+root@47d6f27ce23c:/home/workspace/aipnd-project# python predict.py densenet-checkpoint.2018-05-26T04:17:07-57.pth.tar --image_path='dahlia.jpg'
+Starting...
+Parse Command Line Arguments
+Loading Pre-Trained Model From Checkpoint  densenet-checkpoint.2018-05-26T04:17:07-57.pth.tar
+/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/models/densenet.py:212: UserWarning: nn.init.kaiming_normal is now deprecated in favor of nn.init.kaiming_normal_.
+Using GPU
+Predicting Class of Flower Image
+image_path  dahlia.jpg
+Print Class Name and Probability
+Probability that the image is of class garden phlox is 0.6640042066574097.
+Probability that the image is of class japanese anemone is 0.07961267977952957.
+Probability that the image is of class primula is 0.0732196792960167.
+
+** Total Elapsed Runtime: 0:0:4
+root@47d6f27ce23c:/home/workspace/aipnd-project# python predict.py densenet-checkpoint.2018-05-26T04:17:07-57.pth.tar --image_path='rose.jpg'
+Starting...
+Parse Command Line Arguments
+Loading Pre-Trained Model From Checkpoint  densenet-checkpoint.2018-05-26T04:17:07-57.pth.tar
+/opt/conda/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/models/densenet.py:212: UserWarning: nn.init.kaiming_normal is now deprecated in favor of nn.init.kaiming_normal_.
+Using GPU
+Predicting Class of Flower Image
+image_path  rose.jpg
+Print Class Name and Probability
+Probability that the image is of class rose is 0.9996576905250549.
+Probability that the image is of class camellia is 0.00011286594963166863.
+Probability that the image is of class globe-flower is 0.00010786004713736475.
+
+** Total Elapsed Runtime: 0:0:4

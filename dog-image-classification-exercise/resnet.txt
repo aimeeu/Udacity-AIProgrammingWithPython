@@ -1,0 +1,33 @@
+***** calling get_input_args *****
+***** calling get_pet_labels *****
+***** calling classify_images_udacity *****
+***** calling adjust_results4_isadog_udacity *****
+***** calculates_results_stats *****
+***** check_results_stats *****
+
+ ** Function's Stats:
+N images: 40 N Dog Images: 30 N Not Dog Images: 10 
+Pct Corr dog: 100.0 Pct Correct not-a-dog:  90.0 Pct Correct Breed:  90.0
+
+ ** Check Stats:
+N images: 40 N Dog Images: 30 N Not Dog Images: 10  
+Pet Corr dog:    90 Pct Correct not-a-dog:  60.0 Pct Correct Breed:  90.0
+/nResults Summary for Model Architecture:  RESNET
+            N Images:  40
+        N Dog Images:  30
+    N Not-Dog Images:  10
+ 
+           pct_match:  82.5
+    pct_correct_dogs: 100.0
+   pct_correct_breed:  90.0
+ pct_correct_notdogs:  90.0
+
+INCORRECT Dog/NOT Dog Assignments:
+Real: cat Classifier: norwegian elkhound, elkhound
+
+INCORRECT Dog Breed Assignment:
+Real: golden retriever Classifier: leonberg
+Real: beagle Classifier: walker hound, walker foxhound
+Real: great pyrenees Classifier: kuvasz
+
+** Total Elapsed Runtime: 0:0:3
